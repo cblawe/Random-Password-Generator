@@ -8,23 +8,23 @@ let secondPass = document.getElementById("second-pass")
 //using random from const characters
 
 function generatePass() {  
-    firstPass.textContent = ""
-    secondPass.textContent = ""
+    
+    let password = ""
+    
     for (let i = 0; i < 15; i++) {
-        firstRandom = Math.floor(Math.random()*characters.length)
-        firstPass.textContent += characters[firstRandom]
-        
-        secondRandom = Math.floor(Math.random()*characters.length)
-        secondPass.textContent += characters[secondRandom]   
+        randomCharacter = Math.floor(Math.random()*characters.length)
+        password += characters[randomCharacter] 
     } 
+    
+    return password
 }
 
-function copyPass1() {
-    navigator.clipboard.writeText(firstPass.textContent)
-    alert("Copied: " + firstPass.textContent)
+function renderPasswords(){
+    firstPass.textContent = generatePass()
+    secondPass.textContent = generatePass()
 }
 
-function copyPass2() {
-    navigator.clipboard.writeText(secondPass.textContent)
-    alert("Copied: " + secondPass.textContent)
+function copyPass(password) {
+    navigator.clipboard.writeText(password.textContent)
+    alert("Copied: " + password.textContent)
 }

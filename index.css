@@ -3,11 +3,18 @@
 
 body {
     margin: 0;
-    width: 550px;
-    height: 550px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
     background: #1F2937;
     margin-left: 52px;
     font-family: Inter;
+}
+
+.overall-container {
+    width: 550px;
+    height: 550px;
+    margin: auto;
 }
 
 h1 {
@@ -41,12 +48,12 @@ button {
 hr {
     border: 1px solid #2F3E53;
 }
-.container {
+.password-container {
     display: flex;
     flex-direction: row;
 }
 
-.container > div {
+.password-container > div {
     margin-top: 35px;
     background: #273549;
     width: 211px;
